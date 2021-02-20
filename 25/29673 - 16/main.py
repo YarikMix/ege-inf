@@ -2,18 +2,8 @@ def f(n):
     """Возвращает  наибольший нетривиальный делитель числа,
     если число имеент ровно три нетривиальных делителя,
     в обратном случае возвращает False."""
-    arr = []
-    k = 0
-    d = 2
-    if int(n**0.25) == n**0.25:
-        while d*d < n:
-            if n % d == 0:
-                arr.extend([d, n // d])
-                k += 2
-                if k > 3: return False
-            d += 1
-        if d*d == n: k += 1
-        if k == 3: return max(arr)
+    if int(n**0.25) == n**0.25 and is_prime(n**0.25):
+        return int(n**0.75)
 
 
 for n in range(123456789, 223456789+1):
