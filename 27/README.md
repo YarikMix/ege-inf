@@ -15,6 +15,7 @@ for i in range(0, n - 1):
 
 Или с помощью метода combinations из itertools
 ```bash
+from itertools import combinations
 for pair in combinations(arr):
 	...
 ```
