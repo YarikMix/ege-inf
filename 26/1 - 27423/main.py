@@ -11,6 +11,5 @@ with open("input.txt") as f:
 			res.append(arr[i])
 		else:	
 			break
-	print(len(res), res[-1])
+	print(len(res), res[-1])  # 568 50
 
-# 568 50
