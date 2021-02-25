@@ -6,11 +6,10 @@ def is_prime(n):
         d += 1
     return True
 
-i = 1
-for n in range(245690, 245756+1):
+r = range(245690, 245756+1)
+for i, n in enumerate(r, start=1):
     if is_prime(n):
         print(f"{i} {n}")
-    i += 1
 
 """
 22 245711
