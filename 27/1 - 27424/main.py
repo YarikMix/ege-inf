@@ -10,8 +10,8 @@ with open("inputA.txt") as f:
         msum += max(a, b)
         # Вычисляем минимальную разницу в парах
         x = abs(a - b)
-        if x % 3 != 0 and x < mindiff:
-            mindiff = x
+        if x % 3 != 0:
+            mindiff = min(mindiff, x)
             
     # Максимальная сумма
     if msum % 3 != 0:
