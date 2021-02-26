@@ -11,3 +11,5 @@ def f(a, b, i, name):
 for j in range(1, 69+1):
     print(j)
     f(7, j, 1, "Петя")
+
+# Ответ: 18
