@@ -16,8 +16,10 @@ total_sum += sum(discount) * 0.75
 total_sum += sum(arr)
 total_sum = round(total_sum)
 
-print(total_sum, max(discount))  # 469784 511
-
+print(total_sum, max(discount))
 
 # print(f"Со скидкой {len(discount)}")
 # print(f"Без скидки {N - len(exclude) - len(discount)}")
+
+
+# Ответ: 469784 511
