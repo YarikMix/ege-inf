@@ -1,14 +1,19 @@
-def f(start, n):
-	if n > start and n != 26:
-		if n % 2 == 1:
-			# Если n нечётное
-			return f(start, n - 1) + f(start, (n - 1) // 2)
-		else: 
-			# Если n чётное
-			return f(start, n - 1) 
-	elif n == start:
+"""
+Сколько существует программ, которые преобразуют исходное число 1 в число 27, и 
+при этом траектория вычислений не содержит число 26?
++1
+сделай нечётное
+"""
+
+def f(x, y):
+	if x < y and x != 26:
+		return f(x + 1, y) + f(2 * x + 1, y)
+	elif x == y:
 		return 1
-	else:
+	else :
 		return 0
 
-print(f(1, 27))  # 13
+print(f(1, 27))
+
+
+# Ответ: 13

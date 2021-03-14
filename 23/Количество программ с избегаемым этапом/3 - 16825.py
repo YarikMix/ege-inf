@@ -1,14 +1,20 @@
-def f(start, n):
-	if n > start and n not in (6, 12):
-		if n % 2 == 0:
-			# Если n делится на 2
-			return f(start, n - 1) + f(start, n - 3) + f(start, n // 2)
-		else: 
-			# Если n не делится на 2
-			return f(start, n - 1) + f(start, n - 3)
-	elif n == start:
+"""
+Сколько существует программ, которые преобразуют исходное число 3 в число 16, и 
+при этом траектория вычислений не содержит чисел 6 и 12?
++1
+*2
++3
+"""
+
+def f(x, y):
+	if x < y and x not in (6, 12):
+		return f(x + 1, y) + f(x * 2, y) + f(x + 3, y)
+	elif x == y:
 		return 1
-	else:
+	else :
 		return 0
 
-print(f(3, 16))  # 22
+print(f(3, 16))
+
+
+# Ответ: 22

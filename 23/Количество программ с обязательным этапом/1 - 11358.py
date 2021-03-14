@@ -1,12 +1,20 @@
-def f(start, n):
-	if n > start:
-		if n % 2 == 0:
-			return f(start, n - 1) + f(start, n - 2) + f(start, n // 2)
-		else:
-			return f(start, n - 1) + f(start, n - 2)
-	elif n == start:
+"""
+Сколько существует программ, для которых при исходном числе 3 результатом является число 12 и 
+при этом траектория вычислений содержит число 10?
++1
++2
+*2
+"""
+
+def f(x, y):
+	if x < y:
+		return f(x + 1, y) + f(x + 2, y) + f(x * 2, y)
+	elif x == y:
 		return 1
 	else:
 		return 0
 
-print(f(3, 10) * f(10, 12))  # 60
+print(f(3, 10) * f(10, 12))
+
+
+# Ответ: 60

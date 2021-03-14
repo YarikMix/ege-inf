@@ -1,14 +1,20 @@
-def f(start, n):
-	if n > start and n not in (5, 10):
-		if n % 2 == 0:
-			# Если n делится на 2
-			return f(start, n - 1) + f(start, n - 3) + f(start, n // 2)
-		else: 
-			# Если n не делится на 2
-			return f(start, n - 1) + f(start, n - 3)
-	elif n == start:
+"""
+Сколько существует программ, которые преобразуют исходное число 2 в число 14, и 
+при этом траектория вычислений не содержит чисел 5 и 10?
++1
+*2
++3
+"""
+
+def f(x, y):
+	if x < y and x not in (5, 10):
+		return f(x + 1, y) + f(x * 2, y) + f(x + 3, y)
+	elif x == y:
 		return 1
-	else:
+	else :
 		return 0
 
-print(f(2, 14))  # 26
+print(f(2, 14))
+
+
+# Ответ: 26
