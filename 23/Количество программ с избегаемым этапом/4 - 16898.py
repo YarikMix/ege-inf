@@ -11,7 +11,7 @@ def f(x, y):
 		return f(x + 1, y) + f(x * 2, y) + f(x + 3, y)
 	elif x == y:
 		return 1
-	else :
+	else:
 		return 0
 
 print(f(2, 14))

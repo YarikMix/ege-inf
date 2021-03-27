@@ -1,10 +1,19 @@
+from itertools import permutations
+
+i = 1
+for s in permutations("АОУ"):
+	if i == 210:
+		print(s)
+		break
+	i += 1
+
 def f():
 	i = 1
-	for a1 in ("А", "О", "У"):
-		for a2 in ("А", "О", "У"):
-			for a3 in ("А", "О", "У"):
-				for a4 in ("А", "О", "У"):
-					for a5 in ("А", "О", "У"):
+	for a1 in "АОУ":
+		for a2 in "АОУ":
+			for a3 in "АОУ":
+				for a4 in "АОУ":
+					for a5 in "АОУ":
 						s = a1 + a2 + a3 + a4 + a5
 						if i == 210:
 							return s
