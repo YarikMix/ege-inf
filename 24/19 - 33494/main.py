@@ -10,9 +10,9 @@ with open("input.txt") as f:
 
 d = {s: 0 for s in string.ascii_uppercase}
 
-for i in range(1, len(s) - 1):
-	if s[i - 1] == s[i + 1]:
-		d[s[i]] += 1
+for i in range(len(s)):
+	if s[i] == "E":
+		d[s[i + 1]] += 1
 
 max_count = max(d.values())
 character = get_key_by_value(max_count, d)
@@ -20,4 +20,4 @@ character = get_key_by_value(max_count, d)
 print(character)
 
 
-# Ответ: D
+# Ответ: Y

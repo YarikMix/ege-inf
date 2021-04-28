@@ -1,6 +1,5 @@
 import string
 
-
 def get_key_by_value(val, d):
 	for key, value in d.items():
 		if value == val:
