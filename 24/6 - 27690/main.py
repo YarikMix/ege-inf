@@ -1,4 +1,4 @@
-with open("24.txt") as f:
+with open("input.txt") as f:
 	s = f.readline()
 
 cur_len = 1
