@@ -19,9 +19,6 @@ with open("input.txt") as f:
 		elif sum(res) - arr[i-1] + arr[i] <= M:
 			del(res[-1])
 			res.append(arr[i])
-		elif sum(res) - arr[i-1] - arr[i] + arr[i+1] <= M:
-			del(res[-1])
-			res.append(arr[i+1])
 		else:
 			break
 
@@ -37,7 +34,7 @@ with open("input.txt") as f:
 	# Исключаем из первоначального списка все грузы, массой от 210кг до 220кг
 	arr = sorted(list(filter(lambda x: x < 210 or x > 220, arr)))
 
-	for i in range(len(arr)-1):
+	for i in range(len(arr) - 1):
 		if sum(res) + arr[i] <= M:
 			res.append(arr[i])
 		elif sum(res) - arr[i-1] + arr[i] <= M:
@@ -45,6 +42,7 @@ with open("input.txt") as f:
 			res.append(arr[i])
 		else:
 			break
+
 	print(len(res), sum(res) + 1)
 
 
