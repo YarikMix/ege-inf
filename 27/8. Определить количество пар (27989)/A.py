@@ -5,7 +5,11 @@ from itertools import combinations
 with open("inputA.txt") as f:
     arr = [int(i) for i in f.readlines()][1:]
 
-    res = [x[0] * x[1] for x in combinations(arr, 2) if x[0] * x[1] % 14 == 0]
-    print(max(res))
+    count = 0
+    for a, b in combinations(arr, 2):
+        if (a * b) % 26 == 0:
+        	count += 1
+    print(count)
 
-# A 719740
+
+# Ответ: 19

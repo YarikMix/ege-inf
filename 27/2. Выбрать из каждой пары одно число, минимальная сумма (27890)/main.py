@@ -1,26 +1,27 @@
 with open("inputA.txt") as f:
     # N - количество пар
-    # mindiff - минимальная разница в парах, которая не делится на 3
-    # msum - минимальная сумма
-    N, mindiff, msum = int(f.readline()), 10001, 0
+    # min_diff - минимальная разница в парах, которая не делится на 3
+    # min_sum - минимальная сумма
+    N = int(f.readline())
+    min_diff = 10001
+    min_summ = 0
 
     # Выбираем минимальные числа из пар
     for i in range(N):
         a, b = map(int, f.readline().split())
-        msum += min(a, b)
+        min_summ += min(a, b)
         # Вычисляем минимальную разницу в парах
         x = abs(a - b)
         if x % 3 != 0:
-            mindiff = min(mindiff, x)
+            min_diff = min(min_diff, x)
 
     # Минимальная сумма
-    if msum % 3 != 0:
-        print(msum)
+    if min_summ % 3 != 0:
+        print(min_summ)
     else:
         """Если минимальная сумма делится на 3, то 
         уменьшаем ее на минимальную разницу в парах"""
-        print(msum - mindiff)
+        print(msum - min_diff)
 
 
-# A 67088
-# B 200157478 
+# Ответ: 67088 200157478

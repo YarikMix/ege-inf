@@ -1,4 +1,5 @@
-with open("inputA.txt") as f:
+# Решение A и B
+with open("inputB.txt") as f:
     N = int(f.readline())
     arr = [int(f.readline()) for _ in range(N)]
 
@@ -6,8 +7,8 @@ with open("inputA.txt") as f:
     n31 = len(list(filter(lambda x: x % 31 == 0 and x % 62 != 0, arr)))
     n2 = len(list(filter(lambda x: x % 2 == 0 and x % 62 != 0, arr)))
 
-    count = n62 * (n62 - 1) / 2 + n62 * (N - n62) + n2 * n31
-    print(int(count))
+    count = n62 * (n62 - 1) // 2 + n62 * (N - n62) + n2 * n31
+    print(count)
 
-# A 0
-# B 82307095
+
+# Ответ: 0 82307095

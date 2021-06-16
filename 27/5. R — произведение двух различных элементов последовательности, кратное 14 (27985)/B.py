@@ -1,5 +1,7 @@
+# Решение A и B
 with open("inputB.txt") as f:
-    arr = [int(i) for i in f.readlines()][1:]
+    N = int(f.readline())
+    arr = [int(f.readline()) for _ in range(N)]
 
     # Max14 - максимальное число, кратное 14
     # Max7 - максимальное число, кратное 7, но не кратное 14
@@ -13,5 +15,5 @@ with open("inputB.txt") as f:
     R = max(Max14 * Max, Max7 * Max2)
     print(R)
 
-# A 719740
-# B 994000
+
+# Ответ: 719740 994000
