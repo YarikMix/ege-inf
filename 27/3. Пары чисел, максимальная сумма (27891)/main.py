@@ -1,4 +1,5 @@
-with open("inputA.txt") as f:
+# Решение №1
+with open("inputB.txt") as f:
     # N - количество пар
     # min_diff - минимальная разница в парах, которая не делится на 5
     # max_sum - максимальная сумма
@@ -22,6 +23,38 @@ with open("inputA.txt") as f:
         """Если максимальная сумма делится на 5, то 
         уменьшаем ее на минимальную разницу в парах"""
         print(max_sum - min_diff)
+
+
+# Решение №2
+with open("inputB.txt") as f:
+    N = int(f.readline())
+    s = [0]
+
+    for _ in range(N):
+        pair = [int(x) for x in f.readline().split()]
+        combination = [a + b for a in s for b in pair]
+        s1 = [0] * 5
+        for x in combination:
+            s1[x % 5] = max(s1[x % 5], x)
+        s = [x for x in s1 if x != 0]
+
+    m = max(x for x in s if x % 5 != 0)
+    print(m)
+
+
+# Решение №3
+with open("inputB.txt") as f:
+    # N - количество пар
+    N = int(f.readline())
+    s = [0]
+
+    for _ in range(N):
+        pair = [int(x) for x in f.readline().split()]
+        combination = [a + b for a in s for b in pair]
+        s = {x % 5: x for x in sorted(combination)}.values()
+
+    m = max(x for x in s if x % 5 != 0)
+    print(m)
 
 
 # Ответ: 118951 394491666
