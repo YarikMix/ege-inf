@@ -1,4 +1,3 @@
-# Решение A и B
 with open("inputB.txt") as f:
     N = int(f.readline())
     arr = [int(f.readline()) for _ in range(N)]
@@ -12,8 +11,8 @@ with open("inputB.txt") as f:
     Max2 = max(filter(lambda x: x % 2 == 0 and x % 14 != 0, arr), default=0)
     Max = max(filter(lambda x: x != Max14, arr))
 
-    X = max(Max14 * Max, Max7 * Max2)
-    print(X)
+    R = max(Max14 * Max, Max7 * Max2)
+    print(R)
 
 
-# Ответ: 447552 994000
+# Ответ: 719740 994000

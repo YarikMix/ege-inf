@@ -1,4 +1,3 @@
-# Решение для B
 with open("inputB.txt") as f:
 	arr = [int(i) for i in f.readlines()][1:]
 
@@ -14,5 +13,5 @@ with open("inputB.txt") as f:
 	res = max(M1 + M2, M3_first + M3_second)
 	print(res)
 
-# A 19020
-# B 19998
+
+# Ответ: 19020 19998
