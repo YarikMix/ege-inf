@@ -30,4 +30,4 @@ for pair in combinations(arr):
 
 ## Полезные ссылки
 
-[pdf файл с разборов всех 27 задач](https://portal.tpu.ru/SHARED/t/TRACEY/Courses/TPU_Saturday_2021/Tab_slides/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5%20%D1%81%D1%83%D0%B1%D0%B1%D0%BE%D1%82%D1%8B%2013_03_2021.pdf)
+[PDF файл с разбором всех 27 задач](https://portal.tpu.ru/SHARED/t/TRACEY/Courses/TPU_Saturday_2021/Tab_slides/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5%20%D1%81%D1%83%D0%B1%D0%B1%D0%BE%D1%82%D1%8B%2013_03_2021.pdf)
