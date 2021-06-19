@@ -13,7 +13,7 @@ for x in range(end - 1, 0, -1):
 		else:
 			output[x][y] = -max(follow)
 
-print([S for S in range(1, end - N1 + 1) if output[N1][S] == 2])
+print(*[S for S in range(1, end - N1 + 1) if output[N1][S] == 2])
 
 
 # Ответ: 31 34

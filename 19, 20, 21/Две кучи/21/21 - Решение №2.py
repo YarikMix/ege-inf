@@ -19,7 +19,7 @@ def game(h):
 	elif all(game(m) == "Петя1" or game(m) == "Петя2" for m in moves(h)):
 		return "Ваня2"
 
-print(min([S for S in range(1, 42) if game((7, S)) == "Ваня2"]))
+print(min(S for S in range(1, 42) if game((7, S)) == "Ваня2"))
 
 
 # Ответ: 30
