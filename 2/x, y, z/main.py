@@ -1,5 +1,5 @@
 def F(y, z, x):
-	return (x is z) or (x <= (y and z))
+	return (x == z) or (x <= (y and z))
 
 print("y z x F")
 for x in range(2):
