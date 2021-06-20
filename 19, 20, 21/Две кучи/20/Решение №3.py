@@ -7,9 +7,8 @@ def moves(h):
 
 @lru_cache(None)
 def game(h):
-	a, b = h
 	next = lambda *condition: (game(x) in condition for x in moves(h))
-	if a + b >= 77:
+	if sum(h) >= 77:
 		return "Win"
 	elif any(next("Win")):
 		return "Петя1"
