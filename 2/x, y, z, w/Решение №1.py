@@ -10,4 +10,4 @@ for x in range(2):
 					print(y, w, z, x, 0)
 
 
-# Ответ: xwzy
+# Ответ: ywzx
