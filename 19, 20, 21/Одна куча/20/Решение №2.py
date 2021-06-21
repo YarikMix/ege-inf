@@ -16,7 +16,7 @@ def game(h):
 	elif any(next("Ваня1")):
 		return "Петя2"
 
-print(*[S for S in range(1, 42) if game(S) == "Петя2"])
+print(*(S for S in range(1, 42) if game(S) == "Петя2"))
 
 
 # Ответ: 10 17 19
