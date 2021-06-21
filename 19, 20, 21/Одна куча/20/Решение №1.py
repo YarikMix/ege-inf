@@ -14,8 +14,6 @@ def game(h):
 		return "Ваня1"
 	elif any(game(x) == "Ваня1" for x in moves(h)):
 		return "Петя2"
-	elif all(game(x) == "Петя1" or game(x) == "Петя2" for x in moves(h)):
-		return "Ваня2"
 
 print(*[S for S in range(1, 42) if game(S) == "Петя2"])
 
