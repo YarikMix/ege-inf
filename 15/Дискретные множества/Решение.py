@@ -1,5 +1,5 @@
-import time
 from itertools import chain, combinations
+
 
 def powerset(iterable):
     """powerset([1,2,3]) --> (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
@@ -9,15 +9,14 @@ def powerset(iterable):
 P = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
 Q = {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}
 
-def f(x, A):
-	f = ((x in A) <= (x in P)) and ((x in Q) <= (x not in A))  
-	return f
+def F(x, A):
+	return ((x in A) <= (x in P)) and ((x in Q) <= (x not in A))  
 
 max_len = 0
 for A in powerset(P | Q):
 	OK = True
 	for x in range(1, 1000):
-		if not f(x, A):
+		if not F(x, A):
 			OK = False
 			break
 	if OK:
