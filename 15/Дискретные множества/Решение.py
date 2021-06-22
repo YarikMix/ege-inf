@@ -14,11 +14,7 @@ def F(x, A):
 
 max_len = 0
 for A in powerset(P | Q):
-	OK = True
-	for x in range(1, 1000):
-		if not F(x, A):
-			OK = False
-			break
+	OK = all(F(x, A) for x in range(1000))
 	if OK:
 		max_len = max(max_len, len(A))
 
