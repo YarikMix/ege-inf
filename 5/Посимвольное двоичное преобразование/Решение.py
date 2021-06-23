@@ -1,15 +1,18 @@
-def g(s):
+def G(s):
 	"""Возвращает остаток от деления суммы цифр на 2"""
 	return str(sum([int(i) for i in s]) % 2)
 
-def f(N):
-	"""Алгоритм из условия задачи"""
+def F(N):
 	R = format(N, "b")
-	R += g(R)
-	R += g(R)
+	R += G(R)
+	R += G(R)
 	return int(R, 2)
 
-for N in range(1, 100):
-	print(f"N = {N}, R = {f(N)}")
+N = 1
+while F(N) <= 43:
+	N += 1
 
-# Ответ: 19
+print(F(N))
+
+
+# Ответ: 46
