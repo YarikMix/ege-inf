@@ -1,6 +1,14 @@
-for N in range(200000000, 400000000+1):
-	if N % 12 == 0:
-		for m in range(2, 31, 2):
-			for n in range(1, 21, 2):
-				if N == (2 ** m) * (3 ** n):
-					print(N)
+for N in range(200000004, 400000000+1, 12):
+	for m in range(2, 31, 2):
+		for n in range(1, 21, 2):
+			if N == (2 ** m) * (3 ** n):
+				print(N)
+
+
+"""
+Ответ:
+201326592
+229582512
+254803968
+322486272
+"""
