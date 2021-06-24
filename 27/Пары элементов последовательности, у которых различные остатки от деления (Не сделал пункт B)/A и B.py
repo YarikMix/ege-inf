@@ -27,4 +27,4 @@ with open("inputA.txt") as f:
 	print(s1, s2)
 
 
-# Ответ: 
+# Ответ: 310 728

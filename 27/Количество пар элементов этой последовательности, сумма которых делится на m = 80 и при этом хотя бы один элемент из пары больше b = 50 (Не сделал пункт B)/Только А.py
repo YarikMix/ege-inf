@@ -1,4 +1,3 @@
-# Решение только для A
 from itertools import combinations
 
 
@@ -12,4 +11,5 @@ with open("inputA.txt") as f:
 
 	print(count)
 
-# A 3
+
+# Ответ: 3

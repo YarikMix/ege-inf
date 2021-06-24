@@ -1,7 +1,6 @@
-# Решение только для A
 with open("inputA.txt") as f:
 	n = int(f.readline())
-	arr = [int(f.readline()) for i in range(n)]
+	arr = [int(f.readline()) for _ in range(n)]
 
 	d = {}
 	for i in range(n):
@@ -13,4 +12,5 @@ with open("inputA.txt") as f:
 	pair = d[max_sum]
 	print(*pair)
 
-# A 8096, 6544
+
+# Ответ: 8096 6544
