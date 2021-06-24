@@ -7,8 +7,8 @@ def moves(h):
 @lru_cache(None)
 def game(h):
 	if h >= 42:
-		return "Win"
-	elif any(game(x) == "Win" for x in moves(h)):
+		return "Победа"
+	elif any(game(x) == "Победа" for x in moves(h)):
 		return "Петя1"
 	elif any(game(x) == "Петя1" for x in moves(h)):
 		return "Ваня1"

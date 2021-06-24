@@ -6,16 +6,13 @@ def moves(h):
 
 @lru_cache(None)
 def game(h):
-	if h >= 42:
-		return "Win"
-	elif any(game(x) == "Win" for x in moves(h)):
-		return "Петя1"
-	elif all(game(x) == "Петя1" for x in moves(h)):
-		return "Ваня1"
-	elif any(game(x) == "Ваня1" for x in moves(h)):
-		return "Петя2"
-	elif all(game(x) == "Петя1" or game(x) == "Петя2" for x in moves(h)):
-		return "Ваня2"
+	def next(*condition):
+		return (game(x) in condition for x in moves(h))
+	if h >= 42: return "Победа"
+	elif any(next("Победа")): return "Петя1"
+	elif all(next("Петя1")): return "Ваня1"
+	elif any(next("Ваня1")): return "Петя2"
+	elif all(next("Петя1", "Петя2")): return "Ваня2"
 
 print(min(S for S in range(1, 42) if game(S) == "Ваня2"))
 

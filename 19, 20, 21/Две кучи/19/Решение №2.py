@@ -8,8 +8,8 @@ def moves(h):
 @lru_cache(None)
 def game(h):
 	if sum(h) >= 77:
-		return "Win"
-	elif any(game(m) == "Win" for m in moves(h)):
+		return "Победа"
+	elif any(game(m) == "Победа" for m in moves(h)):
 		return "Петя1"
 	elif any(game(m) == "Петя1" for m in moves(h)):
 		return "Ваня1"
